@@ -1,314 +1,260 @@
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Full-Stack+Developer;Enterprise+Platform+Architect;Building+Scalable+SaaS+Platforms;9+Applications+Integrated&center=true&size=30&color=58A6FF&vCenter=true&width=600&height=50)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1D4ED8,100:38BDF8&height=190&section=header&text=Chinta%20Dinesh%20Reddy&fontSize=38&fontColor=FFFFFF&fontAlignY=36&desc=Software%20Engineering%20%7C%20Platform%20Architecture%20%7C%20AI%20Tooling&descAlignY=59&descSize=15" alt="Chinta Dinesh Reddy — Software Engineer" width="100%" />
 
+<a href="https://github.com/Cdineshreddy12"><img src="https://img.shields.io/badge/GitHub-Cdineshreddy12-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" /></a>
+<a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
+<a href="https://alumni.rguktap.com/"><img src="https://img.shields.io/badge/Live_Project-Alumni_Portal-0F766E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Alumni Portal" /></a>
+Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.
 </div>
 
----
-
-<div align="center">
-
-### 👋 Hi there, I'm Chinta Dinesh Reddy
-
-**🚀 Building Zopkit - A Unified Multi-Application SaaS Platform**
-
-[![Profile Views](https://komarev.com/ghpvc/?username=Cdineshreddy12&color=58A6FF&style=for-the-badge)](https://github.com/Cdineshreddy12)
-[![GitHub followers](https://img.shields.io/github/followers/Cdineshreddy12?style=for-the-badge&color=58A6FF&label=Followers)](https://github.com/Cdineshreddy12)
-[![GitHub User's stars](https://img.shields.io/github/stars/Cdineshreddy12?style=for-the-badge&color=58A6FF&label=Stars)](https://github.com/Cdineshreddy12)
-
-</div>
-
----
-
-## 💼 What I'm Building
-
-### **🏢 Zopkit - Unified Business Management Platform**
-
-A comprehensive **multi-application SaaS platform** that integrates **9+ business applications** into one unified ecosystem with:
-
-- 🔐 **SSO (Single Sign-On)** via Kinde authentication
-- 🏗️ **Multi-tenant architecture** with organization-based isolation
-- 🔄 **Inter-application messaging** via Amazon MQ (RabbitMQ)
-- ⚡ **Temporal workflows** for complex business processes
-- 💳 **Credit-based billing system** with usage tracking
-- 📊 **Real-time analytics** and reporting dashboards
-
----
-
-## 📱 Applications I've Built
-
+👋 About Me
+I'm a Computer Science student at RGUKT Srikakulam and System Architect at Zopkit. I work across product engineering, multi-tenant SaaS architecture, platform engineering, distributed workflows, database performance, observability, and AI-native developer tooling.
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🎯 **Sales CRM**
-- Lead & opportunity management
-- Sales pipeline tracking
-- Invoice & quotation generation
-- Ticket system & communication
 
+🏗️ SaaS Architecture
+
+Multi-tenancy · Shared identity · SSO · Permissions
+
+🔄 Distributed Systems
+
+Temporal · Saga compensation · Retries · Recovery
 </td>
 <td width="50%" valign="top">
 
-### 👥 **HRMS**
-- Employee lifecycle management
-- Attendance & payroll
-- Performance reviews
-- Organizational hierarchy
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+☁️ Platform Engineering
 
-### 💰 **Finance & Accounting**
-- Multi-currency support
-- Expense tracking
-- Financial reporting
-- Payment processing
+AWS · Terraform · Docker · CI/CD
 
-</td>
-<td width="50%" valign="top">
+🧠 AI & Data Engineering
 
-### 🤝 **Affiliate Connect**
-- Unified affiliate & influencer platform
-- AI-powered pricing advisor
-- Advanced fraud detection
-- Automated commission payouts
-
+MCP · Context retrieval · Query optimization
 </td>
 </tr>
-<tr>
-<td width="50%" valign="top">
+</table>
 
-### 📦 **Inventory Management**
-- Stock tracking
-- Warehouse management
-- Product catalog
-- Order fulfillment
+📊 Engineering Impact
+<table>
+<tr>
+<td align="center" width="33%">
+
+<h1>31%</h1>
+<strong>Faster deployments</strong><br/>
+<sub>8m 22s → 5m 44s</sub>
 
 </td>
-<td width="50%" valign="top">
+<td align="center" width="33%">
 
-### 📈 **Marketing Automation**
-- Campaign management
-- Email marketing
-- Analytics & reporting
+<h1>66%</h1>
+<strong>Shorter CI critical path</strong><br/>
+<sub>13m 54s → 4m 41s</sub>
+
+</td>
+<td align="center" width="33%">
+
+<h1>44%</h1>
+<strong>Smaller container images</strong><br/>
+<sub>405 MB → 225 MB</sub>
 
 </td>
 </tr>
 </table>
 
----
+🚀 Selected Engineering Work
+<table>
+<tr>
+<td width="50%" valign="top">
 
-## 🛠️ Tech Stack
+🏗️ Multi-Tenant SaaS Platform
+Zopkit · Platform Architecture
 
-### **Frontend**
-<div align="left">
-  
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-FF6B6B?style=for-the-badge&logo=react&logoColor=white)
+Shared capabilities for a suite of business applications.
+- Tenant-aware identity, SSO, metadata, and permissions
+- Application-to-application workflows with Temporal
+- Saga compensation, retries, and failure recovery
+Multi-tenancy Temporal Saga SSO
+</td>
+<td width="50%" valign="top">
 
-</div>
+⚡ Cloud & Platform Engineering
+Delivery · Infrastructure · Reliability
+- 31% faster deployments
+- 66% shorter CI critical path
+- 44% smaller container images
+- AWS infrastructure, Terraform drift investigation, Docker, GitHub Actions, and observability
+AWS Terraform Docker CI/CD Sentry
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-### **Backend**
-<div align="left">
-  
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Fastify](https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+🎯 Customizable CRM
+Configurable business workflows
+- Configurable modules, fields, pipelines, dashboards, and integrations
+- Leads, accounts, opportunities, and tickets
+- Database query optimization and performance tuning
+- Used by multiple companies, including an enterprise client with 50 employees
+React Node.js Fastify PostgreSQL Drizzle ORM
+</td>
+<td width="50%" valign="top">
 
-</div>
+🤖 AI-Native Bug Resolution
+Developer productivity · MCP
+- MCP-based retrieval for relevant bug and code context
+- AI-assisted investigation using Claude Code and Cursor
+- Permission-aware tooling and revocable API keys
+- Designed to reduce context switching across a multi-application codebase
+MCP Claude Code Cursor LangChain Qdrant
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-### **Cloud & DevOps**
-<div align="left">
-  
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
-![Temporal](https://img.shields.io/badge/Temporal-000000?style=for-the-badge&logo=temporal&logoColor=white)
+🎓 RGUKT Alumni Portal
+University community · 30,000+ people
 
-</div>
+Built a live portal serving the RGUKT university community.
 
-### **Authentication & Security**
-<div align="left">
-  
-![Kinde](https://img.shields.io/badge/Kinde-58A6FF?style=for-the-badge&logo=kinde&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
-![OAuth](https://img.shields.io/badge/OAuth-4285F4?style=for-the-badge&logo=oauth&logoColor=white)
+Visit the Alumni Portal →
+</td>
+<td width="50%" valign="top">
 
-</div>
+🎪 Techniverse College Fest
+Event platform · Approximately 5,000 users
+- Online payment flows
+- QR-code-based entry
+- Participant-facing event experience
+</td>
+</tr>
+</table>
 
----
-
-## 📊 GitHub Stats & Activity
-
+🧠 AI-Assisted Engineering
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Cdineshreddy12&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&include_all_commits=true&count_private=true)
-
-![GitHub Streak](https://github-readme-streak-stats.demolab.com/?user=Cdineshreddy12&theme=radical&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Cdineshreddy12&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&langs_count=8)
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Cdineshreddy12&theme=redical&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=FFFFFF&area=true)
+<img src="https://img.shields.io/badge/Claude_Code-AI_Coding_Assistant-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code" />
+<img src="https://img.shields.io/badge/Cursor-AI_Editor-111827?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
+<img src="https://img.shields.io/badge/MCP-Tool_Integration-2563EB?style=for-the-badge" alt="Model Context Protocol" />
 
 </div>
 
----
+<table>
+<tr><td><strong>Codebase understanding</strong></td><td>Trace request flows, dependencies, and service boundaries.</td></tr>
+<tr><td><strong>Debugging</strong></td><td>Correlate application logs, traces, CI failures, and infrastructure changes.</td></tr>
+<tr><td><strong>Implementation</strong></td><td>Assist with refactoring, test scaffolding, and repetitive engineering tasks.</td></tr>
+<tr><td><strong>Context retrieval</strong></td><td>Surface relevant code and bug information through MCP-based tooling.</td></tr>
+<tr><td><strong>Verification</strong></td><td>Validate changes with tests, review, staging, and production monitoring.</td></tr>
+</table>
 
-## 🏆 Key Achievements
+AI can accelerate engineering; evidence, testing, review, and observability establish correctness.
 
-<div align="left">
-
-### **Architecture & Scalability** 🏗️
-- ✅ Built **multi-tenant SaaS platform** supporting unlimited organizations
-- ✅ Implemented **distributed SSO cache** for cross-application authentication
-- ✅ Migrated from **Redis Streams to Amazon MQ** for better message routing
-- ✅ Designed **event-driven architecture** with RabbitMQ exchanges
-- ✅ Implemented **Temporal workflows** for complex business processes
-- ✅ Created **credit-based billing system** with usage tracking
-
-### **Integration & Messaging** 🔄
-- ✅ Integrated **Kinde authentication** with custom OAuth flows
-- ✅ Built **inter-application messaging** system for 9+ apps
-- ✅ Implemented **Amazon MQ (RabbitMQ)** with topic-based routing
-- ✅ Created **distributed cache** for SSO and permissions
-- ✅ Designed **API gateway** pattern for unified backend access
-
-### **User Experience** 🎨
-- ✅ Built **responsive React applications** with modern UI/UX
-- ✅ Implemented **real-time updates** with WebSockets
-- ✅ Created **onboarding flow** with multi-step forms
-- ✅ Built **analytics dashboards** with Recharts
-- ✅ Implemented **dark mode** and theme customization
-
+🧰 Tech Stack
+Languages & Frontend
+<div>
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,redux,nextjs" alt="HTML, CSS, JavaScript, TypeScript, React, Vite, Tailwind CSS, Redux, Next.js" />
 </div>
 
----
+Backend & API Development
+<div>
+<img src="https://skillicons.dev/icons?i=nodejs,express,python,fastapi" alt="Node.js, Express, Python, FastAPI" />
+</div>
 
-## 📈 Project Statistics
+<p><strong>Also:</strong> Fastify · REST APIs · OAuth 2.0 · JWT · Kinde · Mongoose · Drizzle ORM</p>
 
+Databases, Caching & Search
+<div>
+<img src="https://skillicons.dev/icons?i=mongodb,postgres,redis,elasticsearch,supabase" alt="MongoDB, PostgreSQL, Redis, Elasticsearch, Supabase" />
+</div>
+
+<p><strong>Also:</strong> Redis Streams · Qdrant · Algolia · Indexing · Query optimization · Pagination</p>
+
+Cloud, Infrastructure & Delivery
+<div>
+<img src="https://skillicons.dev/icons?i=aws,docker,terraform,kubernetes,nginx,githubactions,linux,bash,git,github" alt="AWS, Docker, Terraform, Kubernetes, Nginx, GitHub Actions, Linux, Bash, Git, GitHub" />
+</div>
+
+<p><strong>AWS services:</strong> EC2 · S3 · Route 53 · CloudFront · ALB · ACM · SES · CloudWatch · MSK/Kafka · SNS/SQS · Cognito</p>
+
+<p><strong>Also:</strong> PM2 · Docker Compose · Multi-stage builds · CI/CD · Infrastructure as Code</p>
+
+Distributed Systems & Observability
+<div>
+<img src="https://img.shields.io/badge/Temporal-Durable_Workflows-111827?style=flat-square" alt="Temporal" />
+<img src="https://img.shields.io/badge/RabbitMQ-Messaging-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" alt="RabbitMQ" />
+<img src="https://img.shields.io/badge/Kafka-Event_Streaming-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Apache Kafka" />
+<img src="https://img.shields.io/badge/Sentry-Observability-362D59?style=flat-square&logo=sentry&logoColor=white" alt="Sentry" />
+</div>
+
+<p>Temporal · Saga pattern · Redis Streams · RabbitMQ · Kafka · Distributed tracing · Structured logs · Production metrics</p>
+
+AI, LLMs & Developer Tooling
+<div>
+<img src="https://img.shields.io/badge/Claude_Code-AI_Development-D97757?style=flat-square" alt="Claude Code" />
+<img src="https://img.shields.io/badge/Cursor-AI_Editor-111827?style=flat-square" alt="Cursor" />
+<img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-2563EB?style=flat-square" alt="MCP" />
+<img src="https://img.shields.io/badge/LangChain-LLM_Applications-1C3C3C?style=flat-square" alt="LangChain" />
+<img src="https://img.shields.io/badge/Qdrant-Vector_Search-DC244C?style=flat-square" alt="Qdrant" />
+</div>
+
+<p>Gemini API · OpenAI embeddings · Qdrant vector search · MCP servers · AI-assisted debugging and code retrieval</p>
+
+📈 GitHub Activity
 <div align="center">
 
-| Metric | Count |
-|:---:|:---:|
-| **Applications** | 9+ |
-| **Components** | 1000+ |
-| **API Endpoints** | 50+ |
-| **Organizations** | Unlimited |
+<a href="https://github.com/Cdineshreddy12">
+<img src="https://github-readme-stats.vercel.app/api?username=Cdineshreddy12&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github&include_all_commits=true" height="170" alt="Public GitHub statistics" />
+</a>
+<a href="https://github.com/Cdineshreddy12">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Cdineshreddy12&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" height="170" alt="Languages detected in public repositories" />
+</a>
+
+
+<img src="https://streak-stats.demolab.com?user=Cdineshreddy12&theme=tokyonight&hide_border=true" alt="GitHub contribution streak" width="80%" />
+
+
+<img src="https://ghchart.rshah.org/409ba5/Cdineshreddy12" alt="GitHub contribution calendar" width="100%" />
 
 </div>
 
----
+How to read these cards
+- GitHub Stats: GitHub activity the card service can retrieve; visibility, API limits, and caching can affect the result.
+- Top Languages: estimates the language mix of repositories visible to the service. It is not a measure of skill or time spent coding. A notebook-heavy repository can make Jupyter Notebook appear unusually high.
+- Contribution streak and calendar: reflect GitHub-recognized contributions. GitHub may take time to update activity; commits generally need the correct email and to land on a repository's default branch or gh-pages to count in the profile calendar.
+- Source of truth: your GitHub profile and contribution calendar. The README does not hardcode changing counts.
+🎯 Current Focus
+<table>
+<tr>
+<td align="center" width="33%">
 
-## 🔧 Recent Technical Challenges Solved
+🔄 Workflow Resilience
 
-<div align="left">
+<sub>Temporal · Saga recovery</sub>
+</td>
+<td align="center" width="33%">
 
-1. **🔴 Redis Connection Issues** - Made Redis optional with graceful degradation
-2. **📦 Canvas Confetti Import** - Fixed Vite module resolution
-3. **🔐 Multi-App Authentication** - Implemented SSO across 9+ applications
-4. **📨 Message Queue Migration** - Migrated from Redis Streams to Amazon MQ
-5. **🔑 Permission System** - Built hierarchical RBAC with app-specific permissions
-6. **💳 Credit System** - Implemented usage-based billing with tenant/global tiers
 
-</div>
+☁️ Cloud Reliability
 
----
+<sub>AWS · Terraform · CI/CD</sub>
+</td>
+<td align="center" width="33%">
 
-## 💻 Coding Activity
 
+🧠 AI Developer Tools
+
+<sub>MCP · Context retrieval</sub>
+</td>
+</tr>
+</table>
+
+🤝 Let's Connect
 <div align="center">
 
-**⚡ This week I spent my time on:**
-
-```text
-TypeScript    ████████████████████░░░░░░░░░░   65.2%
-JavaScript    ████████░░░░░░░░░░░░░░░░░░░░░░   28.4%
-Markdown      ███░░░░░░░░░░░░░░░░░░░░░░░░░░░   04.1%
-JSON          █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   01.8%
-Other         ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   00.5%
-```
-
-*Last Updated: Auto-updated via GitHub Actions*
-
-</div>
-
----
-
-## 📚 Documentation Created
-
-<div align="left">
-
-- 📖 **Kinde Integration Documentation** - Complete guide for OAuth integration
-- 📖 **CRM Kinde Integration Guide** - Step-by-step template for app integration
-- 📖 **Amazon MQ Analysis** - Message queue architecture decisions
-- 📖 **Redis to RabbitMQ Migration** - Migration strategy and verification
-- 📖 **Architecture Documentation** - System design and patterns
-
-</div>
-
----
-
-## 🌟 What I'm Working On
-
-<div align="left">
-
-- 🔄 Migrating to **Amazon MQ** for better message routing
-- 🏗️ Building **scalable multi-tenant architecture**
-- 🔐 Implementing **SSO across all applications**
-- 📊 Creating **real-time analytics dashboards**
-- 🤖 Integrating **AI features** across the platform
-- 🚀 Optimizing **performance and scalability**
-
-</div>
-
----
-
-## 🤝 Connect With Me
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/c-dinesh-reddy/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cdineshreddy12)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
-
-</div>
-
----
-
-## 💡 Fun Facts
-
-<div align="center">
-
-**⚡ Fun fact:** I've built a platform that integrates **9+ business applications** with unified authentication, messaging, and billing - all from scratch!
-
-**🎯 Always optimizing** for performance and user experience  
-**🔧 Love solving** complex technical challenges  
-**📚 Passionate about** clean code and best practices  
-**🚀 Enjoy automating** repetitive tasks
-
-</div>
-
----
-
-<div align="center">
-
-### 🚀 Always building something new!
-
-**"Code is poetry written in logic"**
-
-⭐️ From [Cdineshreddy12](https://github.com/Cdineshreddy12)
-
-![Snake animation](https://github.com/Cdineshreddy12/Cdineshreddy12/blob/output/github-contribution-grid-snake.svg)
+<a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://github.com/Cdineshreddy12"><img src="https://img.shields.io/badge/GitHub-Follow_my_work-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:38BDF8,50:1D4ED8,100:0F172A&height=100&section=footer" alt="" width="100%" />
 
 </div>
