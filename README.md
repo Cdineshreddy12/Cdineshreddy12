@@ -5,12 +5,13 @@
 <a href="https://github.com/Cdineshreddy12"><img src="https://img.shields.io/badge/GitHub-Cdineshreddy12-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" /></a>
 <a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
 <a href="https://alumni.rguktap.com/"><img src="https://img.shields.io/badge/Live_Project-Alumni_Portal-0F766E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Alumni Portal" /></a>
-Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.
+
+<p><em>Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.</em></p>
 </div>
 
 ## About Me
 I'm a Computer Science student at RGUKT Srikakulam and System Architect at Zopkit. I work across product engineering, multi-tenant SaaS architecture, platform engineering, distributed workflows, database performance, observability, and AI-native developer tooling.
-<table>
+<table width="100%">
 <tr>
 <td width="50%" valign="top">
 
@@ -38,7 +39,7 @@ MCP · Context retrieval · Query optimization
 </table>
 
 ## Engineering Impact
-<table>
+<table width="100%">
 <tr>
 <td align="center" width="33%">
 
@@ -86,7 +87,7 @@ Correctness fixes across the Node.js data layer — the libraries most Node back
 <sub>The common thread: find where two copies of state can diverge when something throws — client cache vs. server, reply queue vs. wire, processed config vs. intent.</sub>
 
 ## Selected Engineering Work
-<table>
+<table width="100%">
 <tr>
 <td width="50%" valign="top">
 
@@ -162,7 +163,7 @@ Event platform · Approximately 5,000 users
 
 </div>
 
-<table>
+<table width="100%">
 <tr><td><strong>Codebase understanding</strong></td><td>Trace request flows, dependencies, and service boundaries.</td></tr>
 <tr><td><strong>Debugging</strong></td><td>Correlate application logs, traces, CI failures, and infrastructure changes.</td></tr>
 <tr><td><strong>Implementation</strong></td><td>Assist with refactoring, test scaffolding, and repetitive engineering tasks.</td></tr>
@@ -246,7 +247,7 @@ AI can accelerate engineering; evidence, testing, review, and observability esta
 - Contribution streak and calendar: reflect GitHub-recognized contributions. GitHub may take time to update activity; commits generally need the correct email and to land on a repository's default branch or gh-pages to count in the profile calendar.
 - Source of truth: your GitHub profile and contribution calendar. The README does not hardcode changing counts.
 ## Current Focus
-<table>
+<table width="100%">
 <tr>
 <td align="center" width="33%">
 
