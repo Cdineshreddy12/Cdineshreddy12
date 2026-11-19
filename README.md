@@ -22,10 +22,11 @@ System Architect at **Zopkit**, where I design and operate a multi-tenant B2B Sa
 
 **Where I spend my time**
 
-- **Multi-tenant architecture** — shared identity, SSO, row-level tenant isolation, permissions
-- **Distributed systems** — Temporal workflows, saga compensation, retries, recovery
-- **Platform engineering** — AWS, Terraform, Docker, CI/CD, observability
-- **AI-native tooling** — MCP servers, agent authorization, context retrieval
+- **Multi-tenant architecture** — one identity platform (SSO, row-level isolation, per-app permissions) serving seven production applications
+- **Distributed systems** — cross-application workflows on Temporal, with saga compensation and recovery designed before the happy path
+- **Correctness in infrastructure** — finding where two copies of state diverge when something throws: client caches vs. servers, reply queues vs. the wire ([open source](#open-source) below)
+- **Platform engineering** — AWS + Terraform + CI/CD, measured in outcomes: deploys 31% faster, CI critical path 66% shorter, images 44% smaller
+- **AI-native tooling** — MCP servers with permission-aware agent authorization and revocable keys, used daily by our developer team
 
 ## Engineering Impact
 
