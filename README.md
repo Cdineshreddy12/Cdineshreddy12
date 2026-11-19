@@ -8,7 +8,7 @@
 
 <p>
 <a href="#open-source"><img src="https://img.shields.io/badge/Open_Source_Contributor-node--redis%20·%20node--postgres%20·%20Fastify-DC382D?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source Contributor" /></a>
-<a href="https://github.com/redis/node-redis/pull/3641"><img src="https://img.shields.io/badge/node--redis-%231_merged-2EA043?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis PR merged" /></a>
+<a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12+is%3Amerged"><img src="https://img.shields.io/badge/node--redis-2_PRs_merged-2EA043?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis PRs merged" /></a>
 </p>
 
 <p><em>Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.</em></p>
@@ -18,7 +18,7 @@
 
 System Architect at **Zopkit**, where I design and operate a multi-tenant B2B SaaS suite — seven applications sharing one identity platform, in production for paying customers. I own the AWS platform and production deploys, lead the developer team's engineering alongside the CEO, and am moving our cross-application workflows onto Temporal.
 
-**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with a fix merged into node-redis (the official Redis client) and more in review. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
+**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with two fixes merged into node-redis (the official Redis client) and more in review. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
 
 **Where I spend my time**
 
@@ -59,7 +59,7 @@ System Architect at **Zopkit**, where I design and operate a multi-tenant B2B Sa
 
 ## Open Source
 
-Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. One merged into node-redis; the rest in review (Nov 2026). Every claim links to the public thread.
+Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. Two merged into node-redis; the rest in review (Nov 2026). Every claim links to the public thread.
 
 <p>
   <a href="https://github.com/brianc/node-postgres/pull/3868"><img src="https://img.shields.io/badge/node--postgres-~30M%2Fweek-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="node-postgres" /></a>
@@ -72,7 +72,7 @@ Correctness fixes across the Node.js data layer — the libraries most Node back
 | **node-postgres** | Found and fixed a statement-cache poisoning bug — a named prepared statement whose parameter fails to serialize breaks every later use of that name (SQLSTATE 26000) for the life of the connection. Self-discovered by reading the bind-error path; green on the full 12-job CI matrix. | [#3867](https://github.com/brianc/node-postgres/issues/3867) · [#3868](https://github.com/brianc/node-postgres/pull/3868) |
 | **node-postgres** | Verified review of the `pool.end()` shutdown-drain fix — confirmed it cures the hang, and caught that the drain path can open new connections after `end()`. | [review](https://github.com/brianc/node-postgres/pull/3854#issuecomment-7002922481) |
 | **node-redis** ✅ | RESP3 client-side cache served stale cross-database reads after `SELECT` — fixed per maintainer-specced design, plus an in-flight-load race found in review. **Merged.** | [#3641](https://github.com/redis/node-redis/pull/3641) |
-| **node-redis** | Cluster slot migration routed a timed-out node's late replies to the wrong commands — the fix drops the desynced connection instead of reusing it. | [#3642](https://github.com/redis/node-redis/pull/3642) |
+| **node-redis** ✅ | Cluster slot migration routed a timed-out node's late replies to the wrong commands — the fix drops the desynced connection instead of reusing it. **Merged.** | [#3642](https://github.com/redis/node-redis/pull/3642) |
 | **@fastify/rate-limit** | Added node-redis support with zero user setup — shared atomic Lua counter addressed via `EVALSHA` with a one-time `NOSCRIPT` fallback. Open request since May 2024. | [#475](https://github.com/fastify/fastify-rate-limit/pull/475) |
 | **@fastify/compress** | Route options silently destroyed global config — the merge ran after default-filling, so route defaults overwrote explicit global choices. Moved the merge before processing. | [#448](https://github.com/fastify/fastify-compress/pull/448) |
 
