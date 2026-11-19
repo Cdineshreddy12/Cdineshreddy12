@@ -8,36 +8,36 @@
 Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.
 </div>
 
-👋 About Me
+## About Me
 I'm a Computer Science student at RGUKT Srikakulam and System Architect at Zopkit. I work across product engineering, multi-tenant SaaS architecture, platform engineering, distributed workflows, database performance, observability, and AI-native developer tooling.
 <table>
 <tr>
 <td width="50%" valign="top">
 
 
-🏗️ SaaS Architecture
+**SaaS Architecture**
 
 Multi-tenancy · Shared identity · SSO · Permissions
 
-🔄 Distributed Systems
+**Distributed Systems**
 
 Temporal · Saga compensation · Retries · Recovery
 </td>
 <td width="50%" valign="top">
 
 
-☁️ Platform Engineering
+**Platform Engineering**
 
 AWS · Terraform · Docker · CI/CD
 
-🧠 AI & Data Engineering
+**AI & Data Engineering**
 
 MCP · Context retrieval · Query optimization
 </td>
 </tr>
 </table>
 
-📊 Engineering Impact
+## Engineering Impact
 <table>
 <tr>
 <td align="center" width="33%">
@@ -64,55 +64,33 @@ MCP · Context retrieval · Query optimization
 </tr>
 </table>
 
-🔓 Open Source
+## Open Source
 
-Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. All PRs currently in review (Nov 2026); every claim links to the public thread.
+Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. All PRs in review (Nov 2026); every claim links to the public thread.
 
+<p>
+  <a href="https://github.com/brianc/node-postgres/pull/3868"><img src="https://img.shields.io/badge/node--postgres-~30M%2Fweek-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="node-postgres" /></a>
+  <a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12"><img src="https://img.shields.io/badge/node--redis-official_client-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis" /></a>
+  <a href="https://github.com/fastify/fastify-rate-limit/pull/475"><img src="https://img.shields.io/badge/Fastify-plugins-202020?style=for-the-badge&logo=fastify&logoColor=white" alt="Fastify" /></a>
+</p>
+
+| Project | Contribution | Links |
+| --- | --- | --- |
+| **node-postgres** | Found and fixed a statement-cache poisoning bug — a named prepared statement whose parameter fails to serialize breaks every later use of that name (SQLSTATE 26000) for the life of the connection. Self-discovered by reading the bind-error path; green on the full 12-job CI matrix. | [#3867](https://github.com/brianc/node-postgres/issues/3867) · [#3868](https://github.com/brianc/node-postgres/pull/3868) |
+| **node-postgres** | Verified review of the `pool.end()` shutdown-drain fix — confirmed it cures the hang, and caught that the drain path can open new connections after `end()`. | [review](https://github.com/brianc/node-postgres/pull/3854#issuecomment-7002922481) |
+| **node-redis** | RESP3 client-side cache served stale cross-database reads after `SELECT` — fixed per maintainer-specced design, plus an in-flight-load race found in review. | [#3641](https://github.com/redis/node-redis/pull/3641) |
+| **node-redis** | Cluster slot migration routed a timed-out node's late replies to the wrong commands — the fix drops the desynced connection instead of reusing it. | [#3642](https://github.com/redis/node-redis/pull/3642) |
+| **@fastify/rate-limit** | Added node-redis support with zero user setup — shared atomic Lua counter addressed via `EVALSHA` with a one-time `NOSCRIPT` fallback. Open request since May 2024. | [#475](https://github.com/fastify/fastify-rate-limit/pull/475) |
+| **@fastify/compress** | Route options silently destroyed global config — the merge ran after default-filling, so route defaults overwrote explicit global choices. Moved the merge before processing. | [#448](https://github.com/fastify/fastify-compress/pull/448) |
+
+<sub>The common thread: find where two copies of state can diverge when something throws — client cache vs. server, reply queue vs. wire, processed config vs. intent.</sub>
+
+## Selected Engineering Work
 <table>
 <tr>
 <td width="50%" valign="top">
 
-🐘 node-postgres · ~30M downloads/week
-
-**Found and fixed a statement-cache poisoning bug** — a named prepared statement whose parameter fails to serialize leaves client and server permanently disagreeing, so every later use of that name fails with SQLSTATE 26000 for the life of the connection. Discovered by reading the bind-error path, not from a report.
-- [Issue #3867](https://github.com/brianc/node-postgres/issues/3867) · [PR #3868](https://github.com/brianc/node-postgres/pull/3868) — regression-tested, green on the 12-job CI matrix
-- Also: [verified review](https://github.com/brianc/node-postgres/pull/3854#issuecomment-7002922481) of the `pool.end()` shutdown-drain fix — confirmed it cures the hang, caught that it can open new connections after `end()`
-</td>
-<td width="50%" valign="top">
-
-🟥 node-redis · official Redis client
-
-**Two correctness fixes in one day**, both on maintainer-confirmed issues:
-- [PR #3641](https://github.com/redis/node-redis/pull/3641) — RESP3 client-side cache served stale cross-database reads after `SELECT`; also fixed an in-flight-load race found in review (a load racing the cache clear could re-insert stale data)
-- [PR #3642](https://github.com/redis/node-redis/pull/3642) — during cluster slot migration, a timed-out node's late replies resolved the *wrong commands* (RESP has no request IDs); the fix drops the desynced connection instead of reusing it
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-⚡ @fastify/rate-limit · ~1M downloads/week
-
-**Added node-redis support** — requested since May 2024. Shares the plugin's atomic Lua counter, addressed via locally computed SHA1 + `EVALSHA` with a one-time `NOSCRIPT` fallback, so there's zero setup for users and no new dependency. Designed around each review objection that stalled the previous attempt.
-- [PR #475](https://github.com/fastify/fastify-rate-limit/pull/475) — verified with two servers enforcing one shared limit; 100% branch coverage
-</td>
-<td width="50%" valign="top">
-
-🗜️ @fastify/compress · ~700K downloads/week
-
-**Fixed route options silently destroying global config** — options were merged after default-filling, so route defaults overwrote explicit global choices. Moved the merge before processing: raw over raw, processed once.
-- [PR #448](https://github.com/fastify/fastify-compress/pull/448) — regression tests written first, proven failing on main
-
-<sub>The common thread across all of these: find where two copies of state can diverge when something throws — client cache vs. server, reply queue vs. wire, processed config vs. intent.</sub>
-</td>
-</tr>
-</table>
-
-🚀 Selected Engineering Work
-<table>
-<tr>
-<td width="50%" valign="top">
-
-🏗️ Multi-Tenant SaaS Platform
+**Multi-Tenant SaaS Platform**
 Zopkit · Platform Architecture
 
 Shared capabilities for a suite of business applications.
@@ -123,7 +101,7 @@ Multi-tenancy Temporal Saga SSO
 </td>
 <td width="50%" valign="top">
 
-⚡ Cloud & Platform Engineering
+**Cloud & Platform Engineering**
 Delivery · Infrastructure · Reliability
 - 31% faster deployments
 - 66% shorter CI critical path
@@ -135,7 +113,7 @@ AWS Terraform Docker CI/CD Sentry
 <tr>
 <td width="50%" valign="top">
 
-🎯 Customizable CRM
+**Customizable CRM**
 Configurable business workflows
 - Configurable modules, fields, pipelines, dashboards, and integrations
 - Leads, accounts, opportunities, and tickets
@@ -145,7 +123,7 @@ React Node.js Fastify PostgreSQL Drizzle ORM
 </td>
 <td width="50%" valign="top">
 
-🤖 AI-Native Bug Resolution
+**AI-Native Bug Resolution**
 Developer productivity · MCP
 - MCP-based retrieval for relevant bug and code context
 - AI-assisted investigation using Claude Code and Cursor
@@ -157,7 +135,7 @@ MCP Claude Code Cursor LangChain Qdrant
 <tr>
 <td width="50%" valign="top">
 
-🎓 RGUKT Alumni Portal
+**RGUKT Alumni Portal**
 University community · 30,000+ people
 
 Built a live portal serving the RGUKT university community.
@@ -166,7 +144,7 @@ Visit the Alumni Portal →
 </td>
 <td width="50%" valign="top">
 
-🎪 Techniverse College Fest
+**Techniverse College Fest**
 Event platform · Approximately 5,000 users
 - Online payment flows
 - QR-code-based entry
@@ -175,7 +153,7 @@ Event platform · Approximately 5,000 users
 </tr>
 </table>
 
-🧠 AI-Assisted Engineering
+## AI-Assisted Engineering
 <div align="center">
 
 <img src="https://img.shields.io/badge/Claude_Code-AI_Coding_Assistant-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code" />
@@ -194,27 +172,27 @@ Event platform · Approximately 5,000 users
 
 AI can accelerate engineering; evidence, testing, review, and observability establish correctness.
 
-🧰 Tech Stack
-Languages & Frontend
+## Tech Stack
+### Languages & Frontend
 <div>
 <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,redux,nextjs" alt="HTML, CSS, JavaScript, TypeScript, React, Vite, Tailwind CSS, Redux, Next.js" />
 </div>
 
-Backend & API Development
+### Backend & API Development
 <div>
 <img src="https://skillicons.dev/icons?i=nodejs,express,python,fastapi" alt="Node.js, Express, Python, FastAPI" />
 </div>
 
 <p><strong>Also:</strong> Fastify · REST APIs · OAuth 2.0 · JWT · Kinde · Mongoose · Drizzle ORM</p>
 
-Databases, Caching & Search
+### Databases, Caching & Search
 <div>
 <img src="https://skillicons.dev/icons?i=mongodb,postgres,redis,elasticsearch,supabase" alt="MongoDB, PostgreSQL, Redis, Elasticsearch, Supabase" />
 </div>
 
 <p><strong>Also:</strong> Redis Streams · Qdrant · Algolia · Indexing · Query optimization · Pagination</p>
 
-Cloud, Infrastructure & Delivery
+### Cloud, Infrastructure & Delivery
 <div>
 <img src="https://skillicons.dev/icons?i=aws,docker,terraform,kubernetes,nginx,githubactions,linux,bash,git,github" alt="AWS, Docker, Terraform, Kubernetes, Nginx, GitHub Actions, Linux, Bash, Git, GitHub" />
 </div>
@@ -223,7 +201,7 @@ Cloud, Infrastructure & Delivery
 
 <p><strong>Also:</strong> PM2 · Docker Compose · Multi-stage builds · CI/CD · Infrastructure as Code</p>
 
-Distributed Systems & Observability
+### Distributed Systems & Observability
 <div>
 <img src="https://img.shields.io/badge/Temporal-Durable_Workflows-111827?style=flat-square" alt="Temporal" />
 <img src="https://img.shields.io/badge/RabbitMQ-Messaging-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" alt="RabbitMQ" />
@@ -233,7 +211,7 @@ Distributed Systems & Observability
 
 <p>Temporal · Saga pattern · Redis Streams · RabbitMQ · Kafka · Distributed tracing · Structured logs · Production metrics</p>
 
-AI, LLMs & Developer Tooling
+### AI, LLMs & Developer Tooling
 <div>
 <img src="https://img.shields.io/badge/Claude_Code-AI_Development-D97757?style=flat-square" alt="Claude Code" />
 <img src="https://img.shields.io/badge/Cursor-AI_Editor-111827?style=flat-square" alt="Cursor" />
@@ -244,7 +222,7 @@ AI, LLMs & Developer Tooling
 
 <p>Gemini API · OpenAI embeddings · Qdrant vector search · MCP servers · AI-assisted debugging and code retrieval</p>
 
-📈 GitHub Activity
+## GitHub Activity
 <div align="center">
 
 <a href="https://github.com/Cdineshreddy12">
@@ -262,38 +240,38 @@ AI, LLMs & Developer Tooling
 
 </div>
 
-How to read these cards
+**How to read these cards**
 - GitHub Stats: GitHub activity the card service can retrieve; visibility, API limits, and caching can affect the result.
 - Top Languages: estimates the language mix of repositories visible to the service. It is not a measure of skill or time spent coding. A notebook-heavy repository can make Jupyter Notebook appear unusually high.
 - Contribution streak and calendar: reflect GitHub-recognized contributions. GitHub may take time to update activity; commits generally need the correct email and to land on a repository's default branch or gh-pages to count in the profile calendar.
 - Source of truth: your GitHub profile and contribution calendar. The README does not hardcode changing counts.
-🎯 Current Focus
+## Current Focus
 <table>
 <tr>
 <td align="center" width="33%">
 
-🔄 Workflow Resilience
+**Workflow Resilience**
 
 <sub>Temporal · Saga recovery</sub>
 </td>
 <td align="center" width="33%">
 
 
-☁️ Cloud Reliability
+**Cloud Reliability**
 
 <sub>AWS · Terraform · CI/CD</sub>
 </td>
 <td align="center" width="33%">
 
 
-🧠 AI Developer Tools
+**AI Developer Tools**
 
 <sub>MCP · Context retrieval</sub>
 </td>
 </tr>
 </table>
 
-🤝 Let's Connect
+## Let's Connect
 <div align="center">
 
 <a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
