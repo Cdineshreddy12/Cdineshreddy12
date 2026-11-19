@@ -11,35 +11,15 @@
 
 ## About Me
 I'm a Computer Science student at RGUKT Srikakulam and System Architect at Zopkit. I work across product engineering, multi-tenant SaaS architecture, platform engineering, distributed workflows, database performance, observability, and AI-native developer tooling.
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-
-**SaaS Architecture**
-
-Multi-tenancy · Shared identity · SSO · Permissions
-
-**Distributed Systems**
-
-Temporal · Saga compensation · Retries · Recovery
-</td>
-<td width="50%" valign="top">
-
-
-**Platform Engineering**
-
-AWS · Terraform · Docker · CI/CD
-
-**AI & Data Engineering**
-
-MCP · Context retrieval · Query optimization
-</td>
-</tr>
-</table>
+- **SaaS Architecture** — Multi-tenancy · Shared identity · SSO · Permissions
+- **Distributed Systems** — Temporal · Saga compensation · Retries · Recovery
+- **Platform Engineering** — AWS · Terraform · Docker · CI/CD
+- **AI & Data Engineering** — MCP · Context retrieval · Query optimization
 
 ## Engineering Impact
-<table width="100%">
+
+<div align="center">
+<table>
 <tr>
 <td align="center" width="33%">
 
@@ -64,6 +44,7 @@ MCP · Context retrieval · Query optimization
 </td>
 </tr>
 </table>
+</div>
 
 ## Open Source
 
@@ -87,7 +68,7 @@ Correctness fixes across the Node.js data layer — the libraries most Node back
 <sub>The common thread: find where two copies of state can diverge when something throws — client cache vs. server, reply queue vs. wire, processed config vs. intent.</sub>
 
 ## Selected Engineering Work
-<table width="100%">
+<table>
 <tr>
 <td width="50%" valign="top">
 
@@ -163,7 +144,7 @@ Event platform · Approximately 5,000 users
 
 </div>
 
-<table width="100%">
+<table>
 <tr><td><strong>Codebase understanding</strong></td><td>Trace request flows, dependencies, and service boundaries.</td></tr>
 <tr><td><strong>Debugging</strong></td><td>Correlate application logs, traces, CI failures, and infrastructure changes.</td></tr>
 <tr><td><strong>Implementation</strong></td><td>Assist with refactoring, test scaffolding, and repetitive engineering tasks.</td></tr>
@@ -247,7 +228,9 @@ AI can accelerate engineering; evidence, testing, review, and observability esta
 - Contribution streak and calendar: reflect GitHub-recognized contributions. GitHub may take time to update activity; commits generally need the correct email and to land on a repository's default branch or gh-pages to count in the profile calendar.
 - Source of truth: your GitHub profile and contribution calendar. The README does not hardcode changing counts.
 ## Current Focus
-<table width="100%">
+
+<div align="center">
+<table>
 <tr>
 <td align="center" width="33%">
 
@@ -271,6 +254,7 @@ AI can accelerate engineering; evidence, testing, review, and observability esta
 </td>
 </tr>
 </table>
+</div>
 
 ## Let's Connect
 <div align="center">
