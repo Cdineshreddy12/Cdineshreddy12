@@ -54,7 +54,7 @@ I also contribute to the open source infrastructure my stack runs on — **node-
 
 ## Open Source
 
-Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. All PRs in review (Nov 2026); every claim links to the public thread.
+Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. One merged into node-redis; the rest in review (Nov 2026). Every claim links to the public thread.
 
 <p>
   <a href="https://github.com/brianc/node-postgres/pull/3868"><img src="https://img.shields.io/badge/node--postgres-~30M%2Fweek-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="node-postgres" /></a>
@@ -66,7 +66,7 @@ Correctness fixes across the Node.js data layer — the libraries most Node back
 | --- | --- | --- |
 | **node-postgres** | Found and fixed a statement-cache poisoning bug — a named prepared statement whose parameter fails to serialize breaks every later use of that name (SQLSTATE 26000) for the life of the connection. Self-discovered by reading the bind-error path; green on the full 12-job CI matrix. | [#3867](https://github.com/brianc/node-postgres/issues/3867) · [#3868](https://github.com/brianc/node-postgres/pull/3868) |
 | **node-postgres** | Verified review of the `pool.end()` shutdown-drain fix — confirmed it cures the hang, and caught that the drain path can open new connections after `end()`. | [review](https://github.com/brianc/node-postgres/pull/3854#issuecomment-7002922481) |
-| **node-redis** | RESP3 client-side cache served stale cross-database reads after `SELECT` — fixed per maintainer-specced design, plus an in-flight-load race found in review. | [#3641](https://github.com/redis/node-redis/pull/3641) |
+| **node-redis** ✅ | RESP3 client-side cache served stale cross-database reads after `SELECT` — fixed per maintainer-specced design, plus an in-flight-load race found in review. **Merged.** | [#3641](https://github.com/redis/node-redis/pull/3641) |
 | **node-redis** | Cluster slot migration routed a timed-out node's late replies to the wrong commands — the fix drops the desynced connection instead of reusing it. | [#3642](https://github.com/redis/node-redis/pull/3642) |
 | **@fastify/rate-limit** | Added node-redis support with zero user setup — shared atomic Lua counter addressed via `EVALSHA` with a one-time `NOSCRIPT` fallback. Open request since May 2024. | [#475](https://github.com/fastify/fastify-rate-limit/pull/475) |
 | **@fastify/compress** | Route options silently destroyed global config — the merge ran after default-filling, so route defaults overwrote explicit global choices. Moved the merge before processing. | [#448](https://github.com/fastify/fastify-compress/pull/448) |
