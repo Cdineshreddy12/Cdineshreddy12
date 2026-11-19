@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1D4ED8,100:38BDF8&height=190&section=header&text=Chinta%20Dinesh%20Reddy&fontSize=38&fontColor=FFFFFF&fontAlignY=36&desc=Software%20Engineering%20%7C%20Platform%20Architecture%20%7C%20AI%20Tooling&descAlignY=59&descSize=15" alt="Chinta Dinesh Reddy — Software Engineer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1D4ED8,100:38BDF8&height=190&section=header&text=Chinta%20Dinesh%20Reddy&fontSize=38&fontColor=FFFFFF&fontAlignY=36&desc=System%20Architect%20%40%20Zopkit%20%C2%B7%20Open%20Source%20Contributor%20%C2%B7%20Cloud%20%C2%B7%20DevOps%20%C2%B7%20AI%20Tooling&descAlignY=58&descSize=14" alt="Chinta Dinesh Reddy — Software Engineer" width="100%" />
 
 <a href="https://github.com/Cdineshreddy12"><img src="https://img.shields.io/badge/GitHub-Cdineshreddy12-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" /></a>
 <a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
