@@ -10,11 +10,17 @@
 </div>
 
 ## About Me
-I'm a Computer Science student at RGUKT Srikakulam and System Architect at Zopkit. I work across product engineering, multi-tenant SaaS architecture, platform engineering, distributed workflows, database performance, observability, and AI-native developer tooling.
-- **SaaS Architecture** — Multi-tenancy · Shared identity · SSO · Permissions
-- **Distributed Systems** — Temporal · Saga compensation · Retries · Recovery
-- **Platform Engineering** — AWS · Terraform · Docker · CI/CD
-- **AI & Data Engineering** — MCP · Context retrieval · Query optimization
+
+System Architect at **Zopkit**, where I design and operate a multi-tenant B2B SaaS suite — seven applications sharing one identity platform, in production for paying customers. I own the AWS platform and production deploys, lead the developer team's engineering alongside the CEO, and am moving our cross-application workflows onto Temporal.
+
+I also contribute to the open source infrastructure my stack runs on — **node-postgres, node-redis, and the Fastify ecosystem** — mostly correctness fixes in error paths and protocol-level state handling (see below). Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
+
+**Where I spend my time**
+
+- **Multi-tenant architecture** — shared identity, SSO, row-level tenant isolation, permissions
+- **Distributed systems** — Temporal workflows, saga compensation, retries, recovery
+- **Platform engineering** — AWS, Terraform, Docker, CI/CD, observability
+- **AI-native tooling** — MCP servers, agent authorization, context retrieval
 
 ## Engineering Impact
 
