@@ -6,6 +6,11 @@
 <a href="https://www.linkedin.com/in/c-dinesh-reddy/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
 <a href="https://alumni.rguktap.com/"><img src="https://img.shields.io/badge/Live_Project-Alumni_Portal-0F766E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Alumni Portal" /></a>
 
+<p>
+<a href="#open-source"><img src="https://img.shields.io/badge/Open_Source_Contributor-node--redis%20·%20node--postgres%20·%20Fastify-DC382D?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source Contributor" /></a>
+<a href="https://github.com/redis/node-redis/pull/3641"><img src="https://img.shields.io/badge/node--redis-%231_merged-2EA043?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis PR merged" /></a>
+</p>
+
 <p><em>Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.</em></p>
 </div>
 
@@ -13,7 +18,7 @@
 
 System Architect at **Zopkit**, where I design and operate a multi-tenant B2B SaaS suite — seven applications sharing one identity platform, in production for paying customers. I own the AWS platform and production deploys, lead the developer team's engineering alongside the CEO, and am moving our cross-application workflows onto Temporal.
 
-I also contribute to the open source infrastructure my stack runs on — **node-postgres, node-redis, and the Fastify ecosystem** — mostly correctness fixes in error paths and protocol-level state handling (see below). Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
+**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with a fix merged into node-redis (the official Redis client) and more in review. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
 
 **Where I spend my time**
 
