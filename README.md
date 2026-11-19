@@ -64,6 +64,49 @@ MCP · Context retrieval · Query optimization
 </tr>
 </table>
 
+🔓 Open Source
+
+Correctness fixes across the Node.js data layer — the libraries most Node backends stand on. All PRs currently in review (Nov 2026); every claim links to the public thread.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+🐘 node-postgres · ~30M downloads/week
+
+**Found and fixed a statement-cache poisoning bug** — a named prepared statement whose parameter fails to serialize leaves client and server permanently disagreeing, so every later use of that name fails with SQLSTATE 26000 for the life of the connection. Discovered by reading the bind-error path, not from a report.
+- [Issue #3867](https://github.com/brianc/node-postgres/issues/3867) · [PR #3868](https://github.com/brianc/node-postgres/pull/3868) — regression-tested, green on the 12-job CI matrix
+- Also: [verified review](https://github.com/brianc/node-postgres/pull/3854#issuecomment-7002922481) of the `pool.end()` shutdown-drain fix — confirmed it cures the hang, caught that it can open new connections after `end()`
+</td>
+<td width="50%" valign="top">
+
+🟥 node-redis · official Redis client
+
+**Two correctness fixes in one day**, both on maintainer-confirmed issues:
+- [PR #3641](https://github.com/redis/node-redis/pull/3641) — RESP3 client-side cache served stale cross-database reads after `SELECT`; also fixed an in-flight-load race found in review (a load racing the cache clear could re-insert stale data)
+- [PR #3642](https://github.com/redis/node-redis/pull/3642) — during cluster slot migration, a timed-out node's late replies resolved the *wrong commands* (RESP has no request IDs); the fix drops the desynced connection instead of reusing it
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+⚡ @fastify/rate-limit · ~1M downloads/week
+
+**Added node-redis support** — requested since May 2024. Shares the plugin's atomic Lua counter, addressed via locally computed SHA1 + `EVALSHA` with a one-time `NOSCRIPT` fallback, so there's zero setup for users and no new dependency. Designed around each review objection that stalled the previous attempt.
+- [PR #475](https://github.com/fastify/fastify-rate-limit/pull/475) — verified with two servers enforcing one shared limit; 100% branch coverage
+</td>
+<td width="50%" valign="top">
+
+🗜️ @fastify/compress · ~700K downloads/week
+
+**Fixed route options silently destroying global config** — options were merged after default-filling, so route defaults overwrote explicit global choices. Moved the merge before processing: raw over raw, processed once.
+- [PR #448](https://github.com/fastify/fastify-compress/pull/448) — regression tests written first, proven failing on main
+
+<sub>The common thread across all of these: find where two copies of state can diverge when something throws — client cache vs. server, reply queue vs. wire, processed config vs. intent.</sub>
+</td>
+</tr>
+</table>
+
 🚀 Selected Engineering Work
 <table>
 <tr>
