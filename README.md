@@ -8,7 +8,7 @@
 
 <p>
 <a href="#open-source"><img src="https://img.shields.io/badge/Open_Source_Contributor-node--redis%20·%20node--postgres%20·%20Fastify-DC382D?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source Contributor" /></a>
-<a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12+is%3Amerged"><img src="https://img.shields.io/badge/node--redis-4_PRs_merged-2EA043?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis PRs merged" /></a>
+<a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12+is%3Amerged"><img src="https://img.shields.io/badge/node--redis-5_PRs_merged-2EA043?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis PRs merged" /></a>
 </p>
 
 <p><em>Building multi-tenant SaaS, reliable cloud infrastructure, distributed workflows, and AI-powered developer tools.</em></p>
@@ -18,7 +18,7 @@
 
 System Architect at **Zopkit**, where I design and operate a multi-tenant B2B SaaS suite — seven applications sharing one identity platform, in production for paying customers. I own the AWS platform and production deploys, lead the developer team's engineering alongside the CEO, and am moving our cross-application workflows onto Temporal.
 
-**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with five fixes merged upstream — four into node-redis (the official Redis client) and one into `@fastify/compress` — five more in review, and a cluster fix assigned to me by the node-redis maintainer. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
+**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with six fixes merged upstream — five into node-redis (the official Redis client) and one into `@fastify/compress` — four more in review. One of the node-redis merges is a cluster fix the maintainer assigned to me from his own issue. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
 
 **Where I spend my time**
 
@@ -60,7 +60,7 @@ System Architect at **Zopkit**, where I design and operate a multi-tenant B2B Sa
 
 ## Open Source
 
-Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Five merged** (four into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **five in review**, and a cluster fix **assigned to me by the node-redis maintainer**. Alongside the code I review other contributors' PRs and work the issue backlog: **16 verified triage verdicts, 14 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
+Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Six merged** (five into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **four in review**. One of them is a cluster fix the maintainer **assigned to me from his own issue**, and then merged. Alongside the code I review other contributors' PRs and work the issue backlog: **16 verified triage verdicts, 14 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
 
 <div align="center">
   <a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12"><img src="https://img.shields.io/badge/node--redis-official_client-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis" /></a>
@@ -76,13 +76,13 @@ Correctness fixes in the Node.js data layer — the libraries most Node backends
 | **node-redis** | Cluster slot migration routed a timed-out node's late replies to the wrong commands — the fix drops the desynced connection instead of reusing it. | [#3642](https://github.com/redis/node-redis/pull/3642) |
 | **node-redis** | The empty-string key routed to a random node instead of its slot. | [#3660](https://github.com/redis/node-redis/pull/3660) |
 | **node-redis** | A sentinel test flake I filed, then fixed: the teardown raced a reentrant reopen, so the assertion ran before `isOpen` flipped. | [#3650](https://github.com/redis/node-redis/issues/3650) · [#3651](https://github.com/redis/node-redis/pull/3651) |
+| **node-redis** | **Assigned to me by the maintainer**, from his own issue and his design. Cluster `connect()` hung forever while one master was unreachable — one down node should cost only its own shard. `connect()` now installs the slot map without awaiting the node connects, and every wait for a connecting node is bounded by the cluster's command timeout. Five rounds of review, then *"Thanks, LGTM."* | [#3592](https://github.com/redis/node-redis/issues/3592) · [#3652](https://github.com/redis/node-redis/pull/3652) |
 | **@fastify/compress** | Route options silently destroyed global config — the merge ran after default-filling, so route defaults overwrote explicit global choices. Eight other PRs had tried to close the issue since May; this is the one that landed. Merged by [@mcollina](https://github.com/mcollina). | [#448](https://github.com/fastify/fastify-compress/pull/448) |
 
 ### In review
 
 | Project | What | Link |
 | --- | --- | --- |
-| **node-redis** | **Assigned by the maintainer.** Cluster `connect()` hung forever while one master was unreachable — one down node should cost only its own shard. `connect()` now installs the slot map without awaiting node connects, and the wait for a connecting node is bounded by the cluster's command timeout. | [#3592](https://github.com/redis/node-redis/issues/3592) · [#3652](https://github.com/redis/node-redis/pull/3652) |
 | **node-postgres** | Found and fixed statement-cache poisoning — a named prepared statement whose parameter fails to serialize breaks every later use of that name (SQLSTATE 26000) for the life of the connection. Found by reading the bind-error path; green on the full 12-job matrix. | [#3867](https://github.com/brianc/node-postgres/issues/3867) · [#3868](https://github.com/brianc/node-postgres/pull/3868) |
 | **@fastify/compress** | ~1 in 993 binary responses ships a gzip header over an uncompressed body: the already-compressed check reads a two-byte signature that arbitrary binary data matches. Quantified by measuring the collision rate. **Approved.** | [#450](https://github.com/fastify/fastify-compress/pull/450) |
 | **@fastify/compress** | The plugin decompresses every request body unless told not to; the default is silent. Makes it visible rather than implicit. | [#449](https://github.com/fastify/fastify-compress/pull/449) |
