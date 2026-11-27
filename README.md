@@ -18,7 +18,7 @@
 
 System Architect at **Zopkit**, where I design and operate a multi-tenant B2B SaaS suite — seven applications sharing one identity platform, in production for paying customers. I own the AWS platform and production deploys, lead the developer team's engineering alongside the CEO, and am moving our cross-application workflows onto Temporal.
 
-**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with six fixes merged upstream — five into node-redis (the official Redis client) and one into `@fastify/compress` — four more in review. One of the node-redis merges is a cluster fix the maintainer assigned to me from his own issue. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
+**Open source contributor** to the infrastructure my stack runs on — **node-redis, node-postgres, and the Fastify ecosystem** — with six fixes merged upstream — five into node-redis (the official Redis client) and one into `@fastify/compress` — three more in review. One of the node-redis merges is a cluster fix the maintainer assigned to me from his own issue. The work is mostly correctness fixes in error paths and protocol-level state handling; details in [Open Source](#open-source) below. Computer Science undergraduate at RGUKT Srikakulam, class of 2027.
 
 **Where I spend my time**
 
@@ -60,7 +60,7 @@ System Architect at **Zopkit**, where I design and operate a multi-tenant B2B Sa
 
 ## Open Source
 
-Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Six merged** (five into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **four in review**. One of them is a cluster fix the maintainer **assigned to me from his own issue**, and then merged. Alongside the code I review other contributors' PRs and work the issue backlog: **16 verified triage verdicts, 14 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
+Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Six merged** (five into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **three in review**. One of them is a cluster fix the maintainer **assigned to me from his own issue**, and then merged. Alongside the code I review other contributors' PRs and work the issue backlog: **16 verified triage verdicts, 14 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
 
 <div align="center">
   <a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12"><img src="https://img.shields.io/badge/node--redis-official_client-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis" /></a>
@@ -85,7 +85,6 @@ Correctness fixes in the Node.js data layer — the libraries most Node backends
 | --- | --- | --- |
 | **node-postgres** | Found and fixed statement-cache poisoning — a named prepared statement whose parameter fails to serialize breaks every later use of that name (SQLSTATE 26000) for the life of the connection. Found by reading the bind-error path; green on the full 12-job matrix. | [#3867](https://github.com/brianc/node-postgres/issues/3867) · [#3868](https://github.com/brianc/node-postgres/pull/3868) |
 | **@fastify/compress** | ~1 in 993 binary responses ships a gzip header over an uncompressed body: the already-compressed check reads a two-byte signature that arbitrary binary data matches. Quantified by measuring the collision rate. **Approved.** | [#450](https://github.com/fastify/fastify-compress/pull/450) |
-| **@fastify/compress** | The plugin decompresses every request body unless told not to; the default is silent. Makes it visible rather than implicit. | [#449](https://github.com/fastify/fastify-compress/pull/449) |
 | **@fastify/rate-limit** | node-redis support with zero user setup — a shared atomic Lua counter addressed via `EVALSHA` with a one-time `NOSCRIPT` fallback. Open request since May 2024. | [#475](https://github.com/fastify/fastify-rate-limit/pull/475) |
 
 ### Review and triage
@@ -104,6 +103,8 @@ Kept here because the reasoning is the point. A maintainer's "no" is as informat
 
 | Project | What | Link |
 | --- | --- | --- |
+| **@fastify/compress** | Proposed warning when request decompression is left at its implicit default. Declined: the module exists to decompress, so warning about it is the wrong shape. Matteo Collina's call, and a fair one. | [#449](https://github.com/fastify/fastify-compress/pull/449) |
+| **node-redis** | A fix for the client/socket event-emitter split. Closed on process, not substance: I opened it before the maintainer had agreed the approach on the issue, which their contributing guidelines require. The issue is still open. | [#3680](https://github.com/redis/node-redis/issues/3680) · [#3684](https://github.com/redis/node-redis/pull/3684) |
 | **node-redis** | Pipelined `EVALSHA` reuse. Declined on design grounds: an `EVALSHA` inside `MULTI..EXEC` cannot fall back on `NOSCRIPT`, so any cache gap risks a partly-applied transaction — a trade the maintainer judged not worth the saved bytes. He was right. | [#3647](https://github.com/redis/node-redis/pull/3647) |
 | **node-redis** | A client-side-cache race across `SELECT`. Real, but closed as not observed in a real application. | [#3661](https://github.com/redis/node-redis/pull/3661) |
 | **nodejs/docker-node** | `npm install` fails for every non-root container user. Verified across root, UID 1002, read-only root filesystem, and yarn; closed for want of a team sponsor rather than on the code. | [#2702](https://github.com/nodejs/docker-node/pull/2702) |
