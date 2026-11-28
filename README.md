@@ -60,7 +60,7 @@ System Architect at **Zopkit**, where I design and operate a multi-tenant B2B Sa
 
 ## Open Source
 
-Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Six merged** (five into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **three in review**. One of them is a cluster fix the maintainer **assigned to me from his own issue**, and then merged. Alongside the code I review other contributors' PRs and work the issue backlog: **16 verified triage verdicts, 14 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
+Correctness fixes in the Node.js data layer — the libraries most Node backends stand on. **Six merged** (five into node-redis, the official Redis client; one into `@fastify/compress`, merged by Fastify's co-creator), **three in review**. One of them is a cluster fix the maintainer **assigned to me from his own issue**, and then merged. Alongside the code I review other contributors' PRs and work the issue backlog: **17 verified triage verdicts, 15 of which the maintainer closed on my word**. Every claim below links to the public thread, including the ones that did not land.
 
 <div align="center">
   <a href="https://github.com/redis/node-redis/pulls?q=is%3Apr+author%3ACdineshreddy12"><img src="https://img.shields.io/badge/node--redis-official_client-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="node-redis" /></a>
@@ -91,7 +91,7 @@ Correctness fixes in the Node.js data layer — the libraries most Node backends
 
 | Project | What | Link |
 | --- | --- | --- |
-| **node-redis** | **16 verified triage verdicts, 14 closed by the maintainer** — each reproduced against current master rather than guessed at, and thanked by name twice. | [verdicts](https://github.com/redis/node-redis/issues?q=is%3Aissue+commenter%3ACdineshreddy12) |
+| **node-redis** | **17 verified triage verdicts, 15 closed by the maintainer** — each reproduced against current master rather than guessed at, and thanked by name three times. | [verdicts](https://github.com/redis/node-redis/issues?q=is%3Aissue+commenter%3ACdineshreddy12) |
 | **node-redis** | A fix I suggested in review shipped inside the maintainer's own PR, as its own commit. | [#3636](https://github.com/redis/node-redis/pull/3636) |
 | **node-redis** | Caught a cache-coherence race in another contributor's serve-stale PR — the same race my merged #3641 fixed in `clear()`. | [#3495](https://github.com/redis/node-redis/pull/3495#pullrequestreview-5975037117) |
 | **node-redis** | Reviewed a contributor's reconnect fix and flagged the overlap with my own assigned PR so the two could land in either order. | [#3656](https://github.com/redis/node-redis/pull/3656) |
